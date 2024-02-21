@@ -27,5 +27,6 @@ WORKDIR ${OSS_FUZZ_ROOT}/infra
 
 # Update infra source code.
 ADD . ${OSS_FUZZ_ROOT}/infra
+COPY ./openssl/* ${OSS_FUZZ_ROOT}/projects/openssl/
 
 RUN python3 -m pip install -r ${OSS_FUZZ_ROOT}/infra/cifuzz/requirements.txt
